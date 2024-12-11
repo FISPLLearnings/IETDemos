@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01StandardDotNetTemplate", "01StandardDotNetTemplate\01StandardDotNetTemplate.csproj", "{F67D5BC9-61DF-4A4B-9C09-84F5C29B6EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02CoreConsoleTemplate", "02CoreConsoleTemplate\02CoreConsoleTemplate.csproj", "{FFF76030-6078-46CD-AC83-B41144B9994E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F67D5BC9-61DF-4A4B-9C09-84F5C29B6EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67D5BC9-61DF-4A4B-9C09-84F5C29B6EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67D5BC9-61DF-4A4B-9C09-84F5C29B6EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67D5BC9-61DF-4A4B-9C09-84F5C29B6EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF76030-6078-46CD-AC83-B41144B9994E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF76030-6078-46CD-AC83-B41144B9994E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF76030-6078-46CD-AC83-B41144B9994E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF76030-6078-46CD-AC83-B41144B9994E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
