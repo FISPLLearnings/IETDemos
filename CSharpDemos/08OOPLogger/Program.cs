@@ -9,7 +9,7 @@
                 Console.WriteLine("Tell us what do you wanr: 1. SQL Server, 2. Oracle, 3.MySQL");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 DatabaseFactory database = new DatabaseFactory();
-                IDatabase someDB = database.GetSomeDatabase(choice);
+                Database someDB = database.GetSomeDatabase(choice);
 
                 Console.WriteLine("Tell us operation choice: 1. Insert, 2. Update, 3.Delete");
                 int opChoice = Convert.ToInt32(Console.ReadLine());
@@ -38,18 +38,42 @@
         }
     }
 
-    public interface IDatabase
+    public abstract class Database
     {
-        void Insert();
-        void Update();
-        void Delete();
+        public Logger _logger;
+        public Database()
+        {
+            _logger = Logger.GetLogger();
+        }
+        protected abstract void DoInsert();
+        protected abstract void DoUpdate();
+        protected abstract void DoDelete();
+        protected abstract string GetDatabaseName();
+
+        string logMsg = null;
+        public void Insert()
+        {
+            DoInsert();
+            logMsg = string.Format("Insert happened in {0} successfully", GetDatabaseName());
+            _logger.Log(logMsg);
+        }
+        public void Update()
+        {
+            DoUpdate();
+            _logger.Log("Update happened in "+ GetDatabaseName()+ " successfully");
+        }
+        public void Delete()
+        {
+            DoDelete();
+            _logger.Log("Delete happened in "+ GetDatabaseName()+ "  successfully");
+        }
     }
 
     public class DatabaseFactory //Object producing factory classes
     {
-        public IDatabase GetSomeDatabase(int choice)
+        public Database GetSomeDatabase(int choice)
         {
-            IDatabase someDatabase = null;
+            Database someDatabase = null;
             switch (choice)
             {
                 case 1:
@@ -68,90 +92,78 @@
             return someDatabase;
         }
     }
-    public class SQLServer : IDatabase
+    public class SQLServer : Database
     {
-        private Logger _logger;
-        public SQLServer()
+        protected override string GetDatabaseName()
         {
-            _logger = Logger.GetLogger();
+            return "SQL Server";
         }
-        public void Insert()
+        protected override void DoInsert()
         {
             //code 
             Console.WriteLine("Insert done in SQL Server Database");
-            _logger.Log("Insert happened in SQL Server successfully");
 
         }
-        public void Update()
+        protected override void DoUpdate()
         {
             //code 
             Console.WriteLine("Update done in SQL Server Database");
-            _logger.Log("Update happened in SQL Server successfully");
         }
-        public void Delete()
+        protected override void DoDelete()
         {
             //code 
             Console.WriteLine("Delete done in SQL Server Database");
-            _logger.Log("Delete happened in SQL Server successfully");
-
         }
     }
-    public class Oracle : IDatabase
+    public class Oracle : Database
     {
-        private Logger _logger;
-        public Oracle()
+        protected override string GetDatabaseName()
         {
-            _logger = Logger.GetLogger();
+            return "Oracle";
         }
-        public void Insert()
+        protected override void DoInsert()
         {
             //code 
             Console.WriteLine("Insert done in Oracle Database");
-            _logger.Log("Insert happened in Oracle successfully");
         }
-        public void Update()
+        protected override void DoUpdate()
         {
             //code 
             Console.WriteLine("Update done in Oracle Database");
-            //_logger.Log("Update happened in Oracle successfully");
         }
-        public void Delete()
+        protected override void DoDelete()
         {
             //code 
             Console.WriteLine("Delete done in Oracle Database");
-            _logger.Log("Delete happened in Oracle successfully");
         }
     }
-    public class MySQL : IDatabase
+    public class MySQL : Database
     {
-        private Logger _logger;
-        public MySQL()
+        protected override string GetDatabaseName()
         {
-            _logger = Logger.GetLogger();
+            return "MySQL";
         }
-        public void Delete()
+        protected override void DoDelete()
         {
             //code 
             Console.WriteLine("Delete done in MySQL Database");
-            _logger.Log("Delete happened in MySQL successfully");
         }
 
-        public void Insert()
+        protected override void DoInsert()
         {
             //code 
             Console.WriteLine("Insert done in MySQL Database");
-            _logger.Log("Insert happened in MySQL successfully");
         }
 
-        public void Update()
+        protected override void DoUpdate()
         {
             //code 
             Console.WriteLine("Update done in MySQL Database");
-            _logger.Log("Update happened in MySQL successfully");
         }
     }
     public class Logger
     {
+        //object pooling
         private static Logger logger=new Logger();
         //private static Logger logger2=new Logger();
         //private static Logger logger3=new Logger();
