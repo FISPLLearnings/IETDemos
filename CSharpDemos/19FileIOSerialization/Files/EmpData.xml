@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAnyType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <anyType xsi:type="Emp">
+    <Address>Pune</Address>
+    <Name>Mugdha</Name>
+    <Id>15</Id>
+  </anyType>
+  <anyType xsi:type="Book">
+    <BookName>Let us C++</BookName>
+  </anyType>
+</ArrayOfAnyType>
