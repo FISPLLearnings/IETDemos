@@ -19,22 +19,45 @@ namespace _21Reflection
 
             for (int i = 0; i < types.Length; i++)
             {
-                Type type = types[i];
+                Type type = types[i]; //CMath
+
+                object dynamicallyCreatedObject = asm.CreateInstance(type.FullName);
+
                 MethodInfo[] allMethods = type.GetMethods();
-                string str = null;
+                string methodSignature = null;
                 for (int j = 0; j < allMethods.Length; j++)
                 {
                     MethodInfo method = allMethods[j];
-                    str = method.ReturnType + " " + method.Name + " ( ";
+                    //int Add ( 
+                    methodSignature = method.ReturnType + " " + method.Name + " ( ";
                     ParameterInfo[] allParameters = method.GetParameters();
+
+                    object[] inputParameters = new object[allParameters.Length];
+
                     for (int k = 0; k < allParameters.Length; k++)
                     {
                         ParameterInfo param = allParameters[k];
-                        str = str + param.ParameterType.ToString() + " " +
+                        //int Add ( int x, int y,
+                        methodSignature = methodSignature + param.ParameterType.ToString() + " " +
                             param.Name + ",";
                     }
-                    str = str.TrimEnd(',') +" )";
-                    Console.WriteLine(str);
+                    for (int m = 0; m < inputParameters.Length; m++)
+                    {
+                        Console.WriteLine("Enter values for {0} of type {1}",
+                            allParameters[m].Name, allParameters[m].ParameterType.ToString());
+                        object val = Convert.ChangeType(Console.ReadLine(), allParameters[m].ParameterType);
+                        inputParameters[m] = val;
+                    }
+
+                    //int Add ( int x, int y )
+                    methodSignature = methodSignature.TrimEnd(',') +" )";
+                    Console.WriteLine(methodSignature);
+                    object? result = type.InvokeMember(method.Name,
+                                    BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod,
+                                    null,
+                                    dynamicallyCreatedObject,
+                                    inputParameters);
+                    Console.WriteLine("Result of {0} = {1}",method.Name,result);
                 }
 
                Attribute [] allAttributes= type.GetCustomAttributes().ToArray();
@@ -46,6 +69,8 @@ namespace _21Reflection
                         Console.WriteLine($"Type: {type.Name} class is Serializable");
                     }
                 }
+
+              
             }
 
         }
