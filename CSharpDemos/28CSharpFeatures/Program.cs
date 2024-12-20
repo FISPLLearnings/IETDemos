@@ -190,31 +190,51 @@ namespace _28CSharpFeatures
             #endregion
 
             #region Extension Methods 
-            int[] arr = { 1, 2, 3, 4, 5 };
-            Console.WriteLine(arr.Max());
+            // int[] arr = { 1, 2, 3, 4, 5 };
+            // Console.WriteLine(arr.Max());
 
-            List<int> lstArr =  arr.MyArrayToList();
-            foreach (int x in lstArr) 
-            {
-                Console.WriteLine(x);
-            }
-            
-           // MyClass obj = new MyClass();
-            string emailStr = "ab.com";
-            bool result = emailStr.CheckForValidEmail(true);
-            //bool result = MyClass.CheckForValidEmail(emailStr);
-            if (result) 
-            {
-                Console.WriteLine("Login successful");
-            }
-            else
-            {
-                Console.WriteLine("Invalid Email");
-            }
+            // List<int> lstArr =  arr.MyArrayToList();
+            // foreach (int x in lstArr) 
+            // {
+            //     Console.WriteLine(x);
+            // }
 
+            //// MyClass obj = new MyClass();
+            // string emailStr = "ab.com";
+            // bool result = emailStr.CheckForValidEmail(true);
+            // //bool result = MyClass.CheckForValidEmail(emailStr);
+            // if (result) 
+            // {
+            //     Console.WriteLine("Login successful");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Invalid Email");
+            // }
+
+            #endregion
+
+            #region Partial Methods 
+            //Person obj = new Person();
+            //obj.Id = 100;
+            //obj.Name = "Tom";
+            #endregion
+
+            #region Names and Optional Parameters 
+            //Display(11, "Alice", "Pune");
+            //Display(20);
+            //Display(30, name: "Ganesh", city:"Nashik");
             #endregion
         }
 
+       // public static void Display(int id, string name = "Alice", string city="Pune")
+       
+        //method implementing optional parameter and Named Parameter feature
+        //No need to write .ctors or class for default initialization.
+        public static void Display(int id, string name = "Appa" , string city="PMC")
+        {
+            Console.WriteLine($"{id}, {name}, {city}");
+        }
         public static void DoSomething(object obj)
         {
             Console.WriteLine(obj.GetType().ToString());
@@ -235,6 +255,59 @@ namespace _28CSharpFeatures
         //{
         //    return i > 10;
         //}
+    }
+    public partial class Person
+    {
+        //Pravin - Developer
+        //partial void DoValidate(string NameOfProperty, object ValueOfProperty)
+        //{
+        //    switch (NameOfProperty)
+        //    {
+        //        case "Id":
+        //            ////some validation logic
+        //            break;
+        //        case "Name":
+        //            ////some validation logic
+        //            break;
+        //        default:
+        //            ////some validation logic
+        //            break;
+        //    }
+        //}
+    }
+    public partial class Person
+    {
+        //Partial Methods are private methods to a class
+        //Partial methods return type is always void.
+        //Partial methods implements partial kyword and
+        // these methods always belongs to Partial Classes.
+        partial void DoValidate(string NameOfProperty, object ValueOfProperty);
+
+
+        private int _PId;
+        private string _PName;
+
+        public string Name
+        {
+            get { return _PName; }
+            set
+            {
+                //Rohit - developer
+                DoValidate("Name", value);
+                _PName = value;
+            }
+        }
+
+        public int Id
+        {
+            get { return _PId; }
+            set
+            {
+                //Rohit - developer
+                DoValidate("Id", value);
+                _PId = value;
+            }
+        }
     }
 
     public static class MyClass
