@@ -117,6 +117,20 @@ namespace _30LINQ
             //Console.WriteLine(result);
             //Console.WriteLine("Time taken  = {0}", watch.ElapsedTicks); 
             #endregion
+
+            List<string> lst = new List<string>() { "Dipak","Mihir","Dilip"};
+            var result = lst.Select(x =>  x.ToUpper() );
+            foreach (var item in result) 
+            {
+                Console.WriteLine(item);
+            }
+            var names = lst.Where(str => str.ToLower().StartsWith("d"));
+            foreach (var nm in names)
+            {
+                Console.WriteLine(nm);
+            }
+
+            //var filteredCollection = .from().Where().Select().ToList();
         }
         public static bool Check(int i)
         {

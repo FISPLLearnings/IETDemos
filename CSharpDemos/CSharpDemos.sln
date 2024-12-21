@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29LINQ", "29LINQ\29LINQ.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30LINQ", "30LINQ\30LINQ.csproj", "{2AB58242-3192-494B-BBCF-2F5DE56B788F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "31ConnectedArchitetureDb", "31ConnectedArchitetureDb\31ConnectedArchitetureDb.csproj", "{C4726FAC-B1CA-4792-B9B6-4A774558BF0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "32DisconnectedArchitectureDB", "32DisconnectedArchitectureDB\32DisconnectedArchitectureDB.csproj", "{14B97764-21DC-4933-BC58-CF7B6FBDF5E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +193,14 @@ Global
 		{2AB58242-3192-494B-BBCF-2F5DE56B788F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB58242-3192-494B-BBCF-2F5DE56B788F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB58242-3192-494B-BBCF-2F5DE56B788F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4726FAC-B1CA-4792-B9B6-4A774558BF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4726FAC-B1CA-4792-B9B6-4A774558BF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4726FAC-B1CA-4792-B9B6-4A774558BF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4726FAC-B1CA-4792-B9B6-4A774558BF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B97764-21DC-4933-BC58-CF7B6FBDF5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B97764-21DC-4933-BC58-CF7B6FBDF5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B97764-21DC-4933-BC58-CF7B6FBDF5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B97764-21DC-4933-BC58-CF7B6FBDF5E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
