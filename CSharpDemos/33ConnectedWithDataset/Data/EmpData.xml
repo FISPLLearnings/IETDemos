@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1</Id>
+    <Name>Sameer</Name>
+    <Address>Surat</Address>
+  </Table1>
+  <Table1>
+    <Id>2</Id>
+    <Name>Pravin</Name>
+    <Address>Patna</Address>
+  </Table1>
+  <Table1>
+    <Id>3</Id>
+    <Name>Mamta</Name>
+    <Address>Manipur</Address>
+  </Table1>
+  <Table1>
+    <Id>4</Id>
+    <Name>Neha</Name>
+    <Address>Nagar</Address>
+  </Table1>
+  <Table1>
+    <Id>6</Id>
+    <Name>Mitesh</Name>
+    <Address>Mathura</Address>
+  </Table1>
+  <Table1>
+    <Id>7</Id>
+    <Name>Hugh Jackman</Name>
+    <Address>Bhivandi</Address>
+  </Table1>
+</NewDataSet>
