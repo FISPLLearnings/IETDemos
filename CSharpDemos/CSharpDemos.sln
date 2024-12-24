@@ -71,6 +71,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "33ConnectedWithDataset", "3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "34EntityFramework", "34EntityFramework\34EntityFramework.csproj", "{6C7E53EB-6405-425B-A131-033D7D1B03D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35Threading", "35Threading\35Threading.csproj", "{05606CAA-65A0-46F3-B5F3-8C644AA67F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36Threading", "36Threading\36Threading.csproj", "{06716715-ABA4-4C64-89C8-59B01D0F9A9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +217,14 @@ Global
 		{6C7E53EB-6405-425B-A131-033D7D1B03D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7E53EB-6405-425B-A131-033D7D1B03D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7E53EB-6405-425B-A131-033D7D1B03D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05606CAA-65A0-46F3-B5F3-8C644AA67F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05606CAA-65A0-46F3-B5F3-8C644AA67F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05606CAA-65A0-46F3-B5F3-8C644AA67F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05606CAA-65A0-46F3-B5F3-8C644AA67F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06716715-ABA4-4C64-89C8-59B01D0F9A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06716715-ABA4-4C64-89C8-59B01D0F9A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06716715-ABA4-4C64-89C8-59B01D0F9A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06716715-ABA4-4C64-89C8-59B01D0F9A9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

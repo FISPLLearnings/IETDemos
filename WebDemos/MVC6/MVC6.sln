@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCCoreWithMVCTemplate", "MVCCoreWithMVCTemplate\MVCCoreWithMVCTemplate.csproj", "{0707D1E5-65A4-4946-83F4-EAB6258454DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

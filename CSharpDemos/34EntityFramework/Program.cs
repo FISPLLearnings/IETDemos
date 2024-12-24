@@ -10,7 +10,8 @@ namespace _34EntityFramework
             IETDbContext dbContext = new IETDbContext();
             while (true)
             {
-                Console.WriteLine("Enter operation choice 1. Select, 2. Insert, 3.Update, 4.Delete");
+                Console.WriteLine("Enter operation choice 1. Select, 2. Insert, 3.Update, 4.Delete" +
+                    " 5. Get Employee by Id using SP, 6. Get All Employess based on Address start Letter");
                 int opChoice = Convert.ToInt32(Console.ReadLine());
                 switch (opChoice)
                 {
@@ -52,6 +53,21 @@ namespace _34EntityFramework
                         Employee empToBeDeleted = dbContext.employees.Find(id1);
                         dbContext.employees.Remove(empToBeDeleted);
                         dbContext.SaveChanges();
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter Id of Employee To Be Searched");
+                        int idToBeSearched = Convert.ToInt32(Console.ReadLine());
+                        Employee empById = dbContext.GetEmployeesById(idToBeSearched);
+                        Console.WriteLine($"Id: {empById.Id}, Name: {empById.Name}, Address: {empById.Address}");
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter first letter of Address for Employees to Be searched");
+                        string? cityStartLetter = Console.ReadLine().ToUpper();
+                        var emps = dbContext.GetEmployeesByAddressStartsWith(cityStartLetter);
+                        foreach (var employee in emps)
+                        {
+                            Console.WriteLine($"Id: {employee.Id}, Name: {employee.Name}, Address: {employee.Address}");
+                        }
                         break;
                     default:
                         Console.WriteLine("Invalid Choice..");
