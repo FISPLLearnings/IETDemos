@@ -1,9 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCCoreWithMVCTemplate", "MVCCoreWithMVCTemplate\MVCCoreWithMVCTemplate.csproj", "{0707D1E5-65A4-4946-83F4-EAB6258454DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01MVCBasic", "01MVCBasic\01MVCBasic.csproj", "{F165FD8D-A351-4C05-877D-8F0545910848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02DefaultController", "02DefaultController\02DefaultController.csproj", "{0079A89C-EFBC-4136-8ED7-6209284D42CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03AttrinuteBasedRouting", "03AttrinuteBasedRouting\03AttrinuteBasedRouting.csproj", "{E0054EA5-0E53-48E4-B691-444BFBD540A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ActionMethodReturnTypes", "04ActionMethodReturnTypes\04ActionMethodReturnTypes.csproj", "{21AE73C3-2C86-48E0-A9BC-64E64206FEB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05ViewBagViewData", "05ViewBagViewData\05ViewBagViewData.csproj", "{841194DE-2EA0-487F-951E-FEDC30A39F9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0707D1E5-65A4-4946-83F4-EAB6258454DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F165FD8D-A351-4C05-877D-8F0545910848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F165FD8D-A351-4C05-877D-8F0545910848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F165FD8D-A351-4C05-877D-8F0545910848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F165FD8D-A351-4C05-877D-8F0545910848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0079A89C-EFBC-4136-8ED7-6209284D42CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0079A89C-EFBC-4136-8ED7-6209284D42CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0079A89C-EFBC-4136-8ED7-6209284D42CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0079A89C-EFBC-4136-8ED7-6209284D42CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0054EA5-0E53-48E4-B691-444BFBD540A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0054EA5-0E53-48E4-B691-444BFBD540A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0054EA5-0E53-48E4-B691-444BFBD540A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0054EA5-0E53-48E4-B691-444BFBD540A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AE73C3-2C86-48E0-A9BC-64E64206FEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AE73C3-2C86-48E0-A9BC-64E64206FEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AE73C3-2C86-48E0-A9BC-64E64206FEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AE73C3-2C86-48E0-A9BC-64E64206FEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841194DE-2EA0-487F-951E-FEDC30A39F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841194DE-2EA0-487F-951E-FEDC30A39F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841194DE-2EA0-487F-951E-FEDC30A39F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841194DE-2EA0-487F-951E-FEDC30A39F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
