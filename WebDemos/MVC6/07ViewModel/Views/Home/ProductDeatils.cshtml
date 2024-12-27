@@ -1,0 +1,17 @@
+﻿@model _07ViewModel.Models.Product;
+<link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+<h1 class="text-info">ProductDeatils</h1>
+
+<div class="card" style="width: 18rem;">
+    <img src="~/Images/img21.jpg" class="card-img-top" alt="Asus Laptop">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">Price: @Model.Price</p>
+        <p class="card-text">Details of Product - Asus Laptop</p>
+        <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div>
+</div>
+
+<script src="~/twitter-bootstrap/js/bootstrap.min.js"></script>
+

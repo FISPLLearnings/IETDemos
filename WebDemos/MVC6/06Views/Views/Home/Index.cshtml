@@ -1,0 +1,29 @@
+﻿<h1>Index View</h1>
+
+@{
+    @foreach (var item in Model)
+    {
+        @if (item is Emp)
+        {
+            <p>Emp Details:</p>
+            var emp = item as Emp;
+            <p>@emp.Id</p>
+            <p>@emp.Name</p>
+            <p>@emp.Address</p>
+        }
+        @if (item is Cust)
+        {
+            <p>Customer Details: </p>
+            var cust = item as Cust;
+            <p>@cust.Id</p>
+            <p>@cust.Name</p>
+            <p>@cust.Address</p>
+        }
+    }
+}
+
+@* @{ *@
+@*     <p>@Model.Id</p> *@
+@*     <p>@Model.Name</p> *@
+@*     <p>@Model.Address</p> *@
+@* } *@

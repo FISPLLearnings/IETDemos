@@ -1,0 +1,47 @@
+﻿@model _11Validations.Models.User;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div asp-validation-summary="All" style="color:orangered"></div>
+            <form asp-controller="Home" asp-action="Result" method="post">
+                <input asp-for="Name" class="form-control" placeholder="Enter name" />
+                <span asp-validation-for="Name" style="color:white"></span>
+                <br />
+                <input asp-for="Email" class="form-control" placeholder="Enter email" />
+                <span asp-validation-for="Email" style="color:white"></span>
+                <br />
+                <input asp-for="Age" class="form-control" placeholder="Enter Age" />
+                <span asp-validation-for="Age" style="color:white"></span>
+                <br />
+                <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password" />
+                <span asp-validation-for="Password" style="color:white"></span>
+                <br />
+                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Enter Password again to confirm" />
+                <span asp-validation-for="ConfirmPassword" style="color:white"></span>
+                <br />
+                <label asp-for="MobileNo"></label>
+                <input asp-for="MobileNo" class="form-control" placeholder="Enter MobileNo e.g +918275006278" />
+                <span asp-validation-for="MobileNo" style="color:white"></span>
+                <br />
+                <input asp-for="WebSiteURL" class="form-control" placeholder="Enter valid WebSite URL e.g. https://www.FISPL.co.in" />
+                <span asp-validation-for="WebSiteURL" style="color:white"></span>
+                <br />
+                <label asp-for="Query"></label>
+                <textarea asp-for="Query" class="form-control" placeholder="Ask your question here:" rows="5"></textarea>
+                <span asp-validation-for="Query" style="color:white"></span>
+                <br />
+                <br />
+                <input type="submit" value="Submit" class="btn btn-outline-danger" />
+            </form>
+        </div>
+    </div>
+</div>
