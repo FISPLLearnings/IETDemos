@@ -1,0 +1,55 @@
+﻿@model IEnumerable<_14CodeFirstEF.Models.Employee>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="container">
+    <a href="/Home/Create" class="text-primary">Create New Employee</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <table class="table table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Salary</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.EId</td>
+                            <td>@emp.EName</td>
+                            <td>@emp.EAddress</td>
+                            <td>@emp.ESalary</td>
+                            <td>
+                                <a href="/Home/Edit/@emp.EId" class="form-control"> Edit
+                                    </a>
+                            </td>
+                            <td>
+                                <a href="/Home/Delete/@emp.EId" class="form-control"> Delete
+                                    </a>
+                            </td>
+                            <td>
+                                <a href="/Home/Details/@emp.EId" class="form-control">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

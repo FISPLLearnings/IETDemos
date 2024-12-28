@@ -1,0 +1,7 @@
+﻿//    https://blog.sqlauthority.com/
+    //https://www.dotnetcurry.com/
+    //https://learn.microsoft.com/
+    //https://www.indiabix.com/
+    //https://www.sanfoundry.com/
+    //https://www.johnpapa.net/
+    //https://learn.microsoft.com/en-us/shows/csharp-for-beginners/

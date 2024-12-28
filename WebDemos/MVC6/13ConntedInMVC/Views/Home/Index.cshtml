@@ -1,0 +1,39 @@
+﻿@model IEnumerable<_13ConntedInMVC.Models.Emp>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-sm-4">
+        <table class="table table-bordered table-dark table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var emp in Model)
+                {
+                        <tr>
+                            <td>@emp.Id</td>
+                            <td>@emp.Name</td>
+                            <td>@emp.Address</td>
+                            <td>
+                                <a href="/Home/Edit" class="text-primary">
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

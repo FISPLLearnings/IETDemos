@@ -1,0 +1,18 @@
+﻿@model _0004DemoMVC.Models.Emp
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+</head>
+<body>
+        <form action="/Demo/Index" method="post">
+            No : <input  type="text" name="No" value="@Model.No"/>
+             Name : <input  type="text" name="Name" value="@Model.Name"/>
+              Address : <input  type="text" name="Address" value="@Model.Address"/>
+        CNo : <input type="text" name="CNo" value="@ViewBag.MyCustomer.CNo" />
+        CName : <input type="text" name="CName" value="@ViewBag.MyCustomer.CName" />
+                <input  type="submit" value="Click Me" />
+        </form>
+</body>
+</html>

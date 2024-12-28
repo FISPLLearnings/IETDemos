@@ -1,0 +1,28 @@
+﻿@model _14CodeFirstEF.Models.Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form asp-controller="Home" asp-action="Create" class="form-control">
+                <label asp-for="EName" class="form-label"></label>
+                <input asp-for="@Model.EName" class="form-control"
+                placeholder="Enter Name"/>
+                <br/>
+                <label asp-for="EAddress" class="form-label"></label>
+                <input asp-for="@Model.EAddress" class="form-control"
+                       placeholder="Enter address" />
+                <br />
+                <label asp-for="ESalary" class="form-label"></label>
+                <input asp-for="@Model.ESalary" class="form-control"
+                       placeholder="Enter salry" />
+                <br />
+                <input type="submit" class="btn btn-primary" value="Create New"/>
+            </form>
+        </div>
+    </div>
+</div>
+

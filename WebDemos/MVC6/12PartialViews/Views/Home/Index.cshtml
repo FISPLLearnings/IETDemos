@@ -1,0 +1,19 @@
+﻿@model IEnumerable<_12PartialViews.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            @* <partial name="_ProductListPartialView" model="product"/> *@
+            @Html.Partial("_ProductListPartialView", product)
+            
+        }
+    </div>
+</div>
+
